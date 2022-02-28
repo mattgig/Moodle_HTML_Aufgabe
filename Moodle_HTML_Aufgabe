@@ -1,0 +1,17 @@
+<p><iframe id="HTMLiveCode" src="https://.../HTMLiveCode/index.html" 
+width="100%" height="600px" style="resize:vertical">
+</iframe></p>
+
+
+<p><button class="btn btn-primary" onclick="Text_kopieren()">
+   Text übernehmen
+</button></p>
+
+<script>
+    function Text_kopieren() {
+        iframe = document.querySelector("#HTMLiveCode");
+        source = iframe.contentWindow.document.querySelector(".CodeMirror-lines");
+        target = document.querySelector("#id_onlinetext_editoreditable");
+        target.innerHTML = source.innerText;
+    }
+</script>
